@@ -7,7 +7,7 @@ Test Setup  open app
 Test Teardown  close app
 
 *** Test Cases ***
-TC-UI-6A Validate Transfer Funds with Insufficient Balance
+TC_UI_6C Validate Transfer Funds with Insufficient Balance
     [Documentation]  Validate transfer funds with insufficient balance
     [Tags]  ui negative
 

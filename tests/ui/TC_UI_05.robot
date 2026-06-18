@@ -7,7 +7,7 @@ Test Setup  open app
 Test Teardown  close app
 
 *** Test Cases ***
-TC-UI-05 Validate Transfer Funds
+TC_UI_05 Validate Transfer Funds
     [Documentation]  Validate transfer details
     [Tags]  ui
 

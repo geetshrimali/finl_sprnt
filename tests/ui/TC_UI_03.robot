@@ -7,7 +7,7 @@ Test Setup  open app
 Test Teardown  close app
 
 *** Test Cases ***
-TC-UI-03 Validate negative account creation
+TC_UI_03 Validate negative account creation
     [Documentation]  Validate Account Creation with Missing Required Selection
     [Tags]  ui negative
 

@@ -20,4 +20,9 @@ TC_E2E_02 Validate account type
     Log To Console    NEW_ACCOUNT_ID=${NEW_ACCOUNT_ID}
     Should Be Equal As Integers  ${response.status_code}  200
 
-    Should Contain  ${response.text}  CHECKING
+    ${body}=    Set Variable    ${response.json()}
+
+    Should Be Equal As Integers    ${response.status_code}    200
+    Should Be Equal    ${body['type']}    CHECKING
+    Log To Console    BALANCE=${body['balance']}
+    Should Be True    ${body['balance']} >= 0

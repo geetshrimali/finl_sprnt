@@ -18,4 +18,5 @@ TC_E2E_01 Create Checking Account and Verify via API
 
     ${response}=    Get Customer Accounts    ${CUSTOMER_ID}
 
-    Should Contain  ${response.text}  ${NEW_ACCOUNT_ID}
+    Should Be Equal As Integers    ${response.status_code}    200
+    Should Contain    ${response.text}    ${NEW_ACCOUNT_ID}

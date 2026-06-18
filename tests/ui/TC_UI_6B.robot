@@ -7,7 +7,7 @@ Test Setup  open app
 Test Teardown  close app
 
 *** Test Cases ***
-TC_UI_06A Validate Negative Amount Transfer
+TC_UI_06B Validate Negative Amount Transfer
     [Documentation]  Validate transfer funds with negative amount
     [Tags]  ui negative
 
