@@ -14,7 +14,7 @@ Create Account
     Wait Until Element Does Not Contain    ${FROM_ACCOUNT}    NONE
 
     Select From List By Label    ${Account_Type}    ${acc_type}
-    Sleep    1
+    Sleep    2
     Click Element    ${Open_New_Account}
     Sleep    1
     Wait Until Page Contains

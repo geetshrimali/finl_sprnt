@@ -12,7 +12,6 @@ Test Teardown  close app
 *** Test Cases ***
 TC_E2E_03 Transfer Funds And Validate Via API
     login    ${USER_ID}    ${USER_PWD}
-    Clear Database
     ${dest_account}=    Create Account    SAVINGS
     ${from_before}=    Get Account Details    ${ACCOUNT_ID}
     ${to_before}=    Get Account Details    ${dest_account}
