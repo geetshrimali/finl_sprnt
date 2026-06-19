@@ -14,7 +14,6 @@ TC_UI_6C Validate Transfer Funds with Insufficient Balance
 
     login  ${USER_ID}  ${USER_PWD}
     Log  Logged in successfully
-    Clear Database
     Create Account    SAVINGS
     Sleep    1
     ${new_account}=    Create Account    SAVINGS

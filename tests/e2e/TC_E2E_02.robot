@@ -13,7 +13,6 @@ TC_E2E_02 Validate account type
     [Documentation]  Validate account type and details
     [Tags]  e2e
     login    ${USER_ID}    ${USER_PWD}
-    Clear Database
     Create Account    CHECKING
     Sleep    4
     ${response}=    Get Account Details    ${NEW_ACCOUNT_ID}
