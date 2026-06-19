@@ -9,7 +9,7 @@ Test Teardown  close app
 
 *** Test Cases ***
 TC_UI_6C Validate Transfer Funds with Insufficient Balance
-    [Documentation]  Validate transfer funds with insufficient balance
+    [Documentation]  Validate transfer funds with insufficient balance(FAIL)
     [Tags]  ui negative
 
     login  ${USER_ID}  ${USER_PWD}
@@ -17,10 +17,7 @@ TC_UI_6C Validate Transfer Funds with Insufficient Balance
     Clear Database
     Create Account    SAVINGS
     Sleep    1
-
-    Transfer Funds A  {${ACCOUNT_ID}  {${NEW_ACCOUNT_ID}  -500
-    Log  Transfer funds completed successfully
-    Transfer Funds B  50000000001
-    Log  Transfer funds attempted with insufficient balance
+    ${new_account}=    Create Account    SAVINGS
+    Transfer Funds A  ${ACCOUNT_ID}  ${new_account}  50000000001
 
     Page Should Contain    Transfer Incomplete!

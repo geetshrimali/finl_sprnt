@@ -11,36 +11,22 @@ Test Teardown  close app
 
 *** Test Cases ***
 TC_E2E_03 Transfer Funds And Validate Via API
-    [Documentation]  Transfer funds and verify the transaction details via API
-    [Tags]  e2e
-    login  ${USER_ID}  ${USER_PWD}
-    Sleep    1
+    login    ${USER_ID}    ${USER_PWD}
     Clear Database
-    Create Account    CHECKING
-    ${ac1}=  Set Variable  ${NEW_ACCOUNT_ID}
-    Log  Source Account: ${ac1}
+    ${dest_account}=    Create Account    SAVINGS
+    ${from_before}=    Get Account Details    ${ACCOUNT_ID}
+    ${to_before}=    Get Account Details    ${dest_account}
+    ${balance_before_from}=    Set Variable    ${from_before.json()['balance']}
+    ${balance_before_to}=    Set Variable    ${to_before.json()['balance']}
 
-    Create Account    SAVINGS
-    ${ac2}=  Set Variable  ${NEW_ACCOUNT_ID}
-    Log  Source Account: ${ac2}
-    Sleep    1
+    Transfer Funds A    ${ACCOUNT_ID}    ${dest_account}    100
 
-    ${source}=  Get Account Details  ${ac1}
-    ${destination}=  Get Account Details  ${ac2}
-    ${src_bal}=  Set Variable  ${source.json()['balance']}
-    ${dst_bal}=   Set Variable  ${destination.json()['balance']}
-    Log  Source balance before: ${src_bal}
-    Log   Dest balance before: ${dst_bal}
+    Sleep    2
+    ${from_after}=    Get Account Details    ${ACCOUNT_ID}
+    ${to_after}=    Get Account Details    ${dest_account}
+    ${balance_after_from}=    Set Variable    ${from_after.json()['balance']}
+    ${balance_after_to}=    Set Variable    ${to_after.json()['balance']}
 
-    Transfer Funds A  ${ac1}  ${ac2}  15
-    Sleep    3
+    Should Be Equal As Numbers    ${balance_after_from}    ${balance_before_from - 100}
 
-    ${source}=  Get Account Details  ${ac1}
-    ${destination}=  Get Account Details  ${ac2}
-    ${source_new}=  Set Variable  ${source.json()['balance']}
-    ${destination_new}=  Set Variable  ${destination.json()['balance']}
-
-    Log  Source balance after: ${source_new}
-    Log  Dest balance after: ${destination_new}
-    Should Be Equal As Numbers  ${source_new}  ${src_bal - 15}
-    Should Be Equal As Numbers  ${destination_new}  ${dst_bal + 15}
+    Should Be Equal As Numbers    ${balance_after_to}    ${balance_before_to + 100}

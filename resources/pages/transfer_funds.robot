@@ -15,6 +15,7 @@ Transfer Funds A
 
     Sleep    1
 
+    Wait Until Element Does Not Contain    ${From_Account}    NONE
     Select From List By Value    ${From_Account}    ${from_acc}
     Select From List By Value    ${To_Account}    ${to_acc}
 
@@ -22,8 +23,8 @@ Transfer Funds A
     ${to}=      Get Selected List Value    ${To_Account}
 
     Set Suite Variable    ${TRANSFER_AMOUNT}    ${amount}
-    Set Suite Variable    ${FROM_ACCOUNT}    ${from}
-    Set Suite Variable    ${TO_ACCOUNT}    ${to}
+    Set Suite Variable    ${FROM_ACNT}    ${from}
+    Set Suite Variable    ${TO_ACNT}    ${to}
 
     Sleep    2
     Click Element    ${Transfer_Button}
@@ -49,8 +50,8 @@ Transfer Funds B
     ${to}=      Get Selected List Value    ${To_Account}
 
     Set Suite Variable    ${TRANSFER_AMOUNT}    ${amount}
-    Set Suite Variable    ${FROM_ACCOUNT}    ${from}
-    Set Suite Variable    ${TO_ACCOUNT}    ${to}
+    Set Suite Variable    ${FROM_ACNT}    ${from}
+    Set Suite Variable    ${TO_ACNT}    ${to}
 
     Sleep    2
     Click Element    ${Transfer_Button}
@@ -66,8 +67,8 @@ Validate Transfer
     ${to}=        Get Text    ${To_Account_Result}
 
     Should Contain    ${amount}    ${TRANSFER_AMOUNT}
-    Should Be Equal    ${from}    ${FROM_ACCOUNT}
-    Should Be Equal    ${to}      ${TO_ACCOUNT}
+    Should Be Equal    ${from}    ${FROM_ACNT}
+    Should Be Equal    ${to}      ${TO_ACNT}
 
     Log  Transfer validated successfully
 

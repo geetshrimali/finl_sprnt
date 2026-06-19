@@ -15,7 +15,7 @@ TC_UI_04 Transfer Funds
 
     login    ${USER_ID}  ${USER_PWD}
     Log    logged in successfully
-    Create Account    SAVINGS
-    Sleep    1
-    Transfer Funds A  ${ACCOUNT_ID}  ${NEW_ACCOUNT_ID}  500
+    ${new_account}=    Create Account    SAVINGS
+    Transfer Funds A  ${ACCOUNT_ID}  ${new_account}  500
+
     Log    transfer funds successful

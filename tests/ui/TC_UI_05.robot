@@ -16,10 +16,11 @@ TC_UI_05 Validate Transfer Funds
     Log  Logged in successfully
     Create Account    SAVINGS
     Sleep    1
-    Transfer Funds A  ${ACCOUNT_ID}  ${NEW_ACCOUNT_ID}  500
+    ${new_account}=    Create Account    SAVINGS
+    Transfer Funds A  ${ACCOUNT_ID}  ${new_account}  500
     Log  Transfer funds completed successfully
 
     Sleep    1
-    Clear Database
+
     Validate Transfer
     Log  Transfer validated

@@ -9,15 +9,14 @@ Test Teardown  close app
 
 *** Test Cases ***
 TC_UI_06B Validate Negative Amount Transfer
-    [Documentation]  Validate transfer funds with negative amount
+    [Documentation]  Validate transfer funds with negative amount(FAIL)
     [Tags]  ui negative
 
     login  ${USER_ID}  ${USER_PWD}
     Log  Logged in successfully
     Clear Database
-    Create Account    SAVINGS
-    Sleep    1
-    Transfer Funds A  {${ACCOUNT_ID}  {${NEW_ACCOUNT_ID}  -500
+    ${new_account}=    Create Account    SAVINGS
+    Transfer Funds A  ${ACCOUNT_ID}  ${new_account}  -500
     Log  Transfer funds completed successfully
 
     Page Should Contain    Transfer Incomplete!

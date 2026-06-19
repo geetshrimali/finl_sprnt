@@ -8,12 +8,12 @@ Test Teardown  close app
 
 *** Test Cases ***
 TC_UI_07 Validate Transfer To Same Account
-    [Documentation]  Validate transfer to same account
+    [Documentation]  Validate transfer to same account(FAIL)
     [Tags]  ui negative
 
     login    ${USER_ID}  ${USER_PWD}
     Log  Logged in successfully
-    Clear Database
+
     Transfer Funds Same Account    100
     Log  Transfer funds to same account completed successfully
 

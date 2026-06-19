@@ -13,5 +13,4 @@ TC_UI_01 Create Savings Account
     [Tags]  ui
 
     login    ${USER_ID}    ${USER_PWD}
-    Clear Database
     Create Account  SAVINGS

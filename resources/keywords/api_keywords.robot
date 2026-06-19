@@ -23,6 +23,7 @@ Get Account Details
     ${response}=    GET On Session    parabank   /accounts/${accountId}  expected_status=any  headers=${headers}
     RETURN    ${response}
 
+
 Clear Database
     Create Session To API
     ${headers}=  Create Dictionary    Accept=application/json

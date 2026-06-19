@@ -11,6 +11,8 @@ Create Account
 
     Wait Until Element Is Visible    ${Account_Type}    10s
 
+    Wait Until Element Does Not Contain    ${FROM_ACCOUNT}    NONE
+
     Select From List By Label    ${Account_Type}    ${acc_type}
     Sleep    1
     Click Element    ${Open_New_Account}
@@ -22,4 +24,6 @@ Create Account
 
     Set Suite Variable    ${NEW_ACCOUNT_ID}    ${accountId}
 
-    Log To Console    ${NEW_ACCOUNT_ID}
+    Log To Console    Created Account: ${accountId}
+
+    RETURN    ${accountId}
