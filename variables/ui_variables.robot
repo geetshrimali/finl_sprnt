@@ -1,0 +1,5 @@
+*** Variables ***
+${CUSTOMER_ID}  12212
+${ACCOUNT_ID}  13344
+${ACCOUNT_ID_2}  13455
+${ACCOUNT_ID_3}  13566

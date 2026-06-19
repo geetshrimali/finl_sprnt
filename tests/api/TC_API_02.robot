@@ -4,8 +4,8 @@ Resource    ../../resources/keywords/api_keywords.robot
 Suite Setup  Create Session To API
 
 *** Test Cases ***
-TC_API_02 verify newly created account
-    [Documentation]  Verify newly created account API
+TC_API_02 verify account exists
+    [Documentation]  Verify Account Exists in API Response
     [Tags]  api
 
     ${response}=  Get Customer Accounts    ${CUSTOMER_ID}

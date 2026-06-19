@@ -12,4 +12,5 @@ TC_UI_02 Create Checking Account
     [Tags]  ui
 
     login    ${USER_ID}    ${USER_PWD}
+    Clear Database
     Create Account  CHECKING

@@ -13,7 +13,7 @@ TC_E2E_01 Create Checking Account and Verify via API
     [Documentation]  Create a checing account and verify the account details via API
     [Tags]  e2e
     login    ${USER_ID}    ${USER_PWD}
-
+    Clear Database
     Create Account    CHECKING
 
     ${response}=    Get Customer Accounts    ${CUSTOMER_ID}

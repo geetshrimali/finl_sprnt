@@ -12,7 +12,7 @@ TC_UI_03 Validate negative account creation
     [Tags]  ui negative
 
     login    ${USER_ID}    ${USER_PWD}
-
+    Clear Database
     Click Element    ${Open_Account}
 
     Wait Until Element Is Visible    ${Account_Type}
@@ -23,5 +23,5 @@ TC_UI_03 Validate negative account creation
 
     Sleep   2
 
-    Wait Until Page Contains
-    ...    Congratulations, your account is now open.
+    Wait Until Page Contains    Congratulations, your account is now open.
+

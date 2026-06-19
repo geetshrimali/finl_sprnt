@@ -1,6 +1,7 @@
 *** Settings ***
 Resource  ../../resources/keywords/common_resources.robot
 Resource  ../../resources/pages/transfer_funds.robot
+Resource  ../../resources/pages/open_account.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
@@ -12,6 +13,10 @@ TC_UI_06A Validate Zero Amount Transfer
     [Tags]  ui negative
     login    ${USER_ID}    ${USER_PWD}
 
-    Transfer Funds    0
+    Clear Database
+    Create Account    SAVINGS
+    Sleep    1
+    Transfer Funds A  {${ACCOUNT_ID}  {${NEW_ACCOUNT_ID}  -500
+    Log  Transfer funds completed successfully
 
-    Page Should Contain    Transfer Complete!
+    Page Should Contain    Transfer Incomplete!

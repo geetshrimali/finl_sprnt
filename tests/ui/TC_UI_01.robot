@@ -1,6 +1,7 @@
 *** Settings ***
 Resource  ../../resources/keywords/common_resources.robot
 Resource  ../../resources/pages/open_account.robot
+Resource  ../../resources/keywords/api_keywords.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
@@ -12,4 +13,5 @@ TC_UI_01 Create Savings Account
     [Tags]  ui
 
     login    ${USER_ID}    ${USER_PWD}
+    Clear Database
     Create Account  SAVINGS

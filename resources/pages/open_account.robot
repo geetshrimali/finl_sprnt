@@ -18,7 +18,7 @@ Create Account
     Wait Until Page Contains
     ...    Congratulations, your account is now open.
 
-    ${accountId}=    Get Text    ${New_Account_ID}
+    ${accountId}=    Get Text    ${New_Account_ID_LOC}
 
     Set Suite Variable    ${NEW_ACCOUNT_ID}    ${accountId}
 
