@@ -4,7 +4,7 @@ Resource  ../../resources/pages/transfer_funds.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_UI_07 Validate Transfer To Same Account
@@ -15,7 +15,6 @@ TC_UI_07 Validate Transfer To Same Account
     Log  Logged in successfully
 
     Transfer Funds Same Account    100
-    Log  Transfer funds to same account completed successfully
-
+    Wait Until Element Is Visible    ${Amount_result}
     Page Should Contain    Transfer Incomplete!
 

@@ -1,0 +1,6 @@
+*** Test Cases ***,${Firstname},${Lastname},${Address},${City},${State},${Zipcode},${Phnm},${SSN},${Username},${Password},${Confirm}
+Register rahulsharma,Rahul,Sharma,12 MG Road,Jaipur,Rajasthan,302001,9876512301,111223,rahulsharma,1234,1234
+Register priyapatel,Priya,Patel,45 Park Street,Ahmedabad,Gujarat,380001,9876512302,222334,priyapatel,1234,1234
+Register amitkumar,Amit,Kumar,78 Civil Lines,Lucknow,Uttar Pradesh,226001,9876512303,333445,amitkumar,1234,1234
+Register snehareddy,Sneha,Reddy,23 Banjara Hills,Hyderabad,Telangana,500034,9876512304,444556,snehareddy,1234,1234
+Register vikramsingh,Vikram,Singh,56 Model Town,Chandigarh,Punjab,160001,9876512305,555667,vikramsingh,1234,1234

@@ -5,7 +5,7 @@ ${Transfer_Funds}  css=a[href="transfer.htm"]
 
 ${Account_Type}  xpath=//select[@id="type"]
 ${Existing_Account}  xpath=//select[@id="fromAccountId"]
-${Open_New_account}  xpath=//input[@value='Open New Account']
+${Open_New_account}  css=input.button
 ${New_Account_ID_LOC}   xpath=//a[@id='newAccountId']
 ${NEW_ACCOUNT_ID}        NONE
 

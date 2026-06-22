@@ -5,7 +5,7 @@ Resource  ../../resources/pages/open_account.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_UI_06B Validate Negative Amount Transfer
@@ -17,6 +17,5 @@ TC_UI_06B Validate Negative Amount Transfer
     Clear Database
     ${new_account}=    Create Account    SAVINGS
     Transfer Funds A  ${ACCOUNT_ID}  ${new_account}  -500
-    Log  Transfer funds completed successfully
-
+    Wait Until Element Is Visible    ${Amount_result}
     Page Should Contain    Transfer Incomplete!

@@ -23,6 +23,26 @@ Get Account Details
     ${response}=    GET On Session    parabank   /accounts/${accountId}  expected_status=any  headers=${headers}
     RETURN    ${response}
 
+Account Should Exist In API
+    [Arguments]    ${account_id}
+
+    ${response}=    Get Account Details    ${account_id}
+    Should Be Equal As Integers    ${response.status_code}    200
+
+Validate Transfer Via API
+    [Arguments]    ${fr_ac}    ${to_ac}    ${before_from}    ${before_to}
+
+    ${from_after}=    Get Account Details    ${fr_ac}
+    ${to_after}=      Get Account Details    ${to_ac}
+
+    ${after_from}=    Set Variable    ${from_after.json()['balance']}
+    ${after_to}=      Set Variable    ${to_after.json()['balance']}
+
+    ${expected_from}=    Evaluate    float(${before_from}) - 100
+    ${expected_to}=      Evaluate    float(${before_to}) + 100
+
+    Should Be Equal As Numbers    ${after_from}    ${expected_from}
+    Should Be Equal As Numbers    ${after_to}      ${expected_to}
 
 Clear Database
     Create Session To API

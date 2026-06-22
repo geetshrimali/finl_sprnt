@@ -1,0 +1,23 @@
+2026-06-23 01:33:22.581716 ==============================================================================
+2026-06-23 01:33:22.631176 Tests
+2026-06-23 01:33:22.631176 ==============================================================================
+2026-06-23 01:33:22.631176 Tests.Api
+2026-06-23 01:33:22.631176 ==============================================================================
+2026-06-23 01:33:22.995766 Tests.Api.TC API 02
+2026-06-23 01:33:23.054183 ==============================================================================
+2026-06-23 01:33:24.399032 TC_API_02 verify account exists :: Verify Account Exists in API Re... [{'id': 13344, 'customerId': 12212, 'type': 'CHECKING', 'balance': -49999995796.07}, {'id': 13455, 'customerId': 12212, 'type': 'SAVINGS', 'balance': -400.0}, {'id': 13566, 'customerId': 12212, 'type': 'SAVINGS', 'balance': 50000001019.0}, {'id': 13788, 'customerId': 12212, 'type': 'CHECKING', 'balance': 200.0}, {'id': 13899, 'customerId': 12212, 'type': 'SAVINGS', 'balance': 0.0}]
+2026-06-23 01:33:24.399032 C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'parabank.parasoft.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+2026-06-23 01:33:24.446101 200
+2026-06-23 01:33:24.446101   warnings.warn(
+2026-06-23 01:33:24.446101 | PASS |
+2026-06-23 01:33:24.446101 ------------------------------------------------------------------------------
+2026-06-23 01:33:24.446101 Tests.Api.TC API 02                                                   | PASS |
+2026-06-23 01:33:24.446101 1 test, 1 passed, 0 failed
+2026-06-23 01:33:24.446101 ==============================================================================
+2026-06-23 01:33:24.446101 Tests.Api                                                             | PASS |
+2026-06-23 01:33:24.446101 1 test, 1 passed, 0 failed
+2026-06-23 01:33:24.446101 ==============================================================================
+2026-06-23 01:33:24.446101 Tests                                                                 | PASS |
+2026-06-23 01:33:24.446101 1 test, 1 passed, 0 failed
+2026-06-23 01:33:24.446101 ==============================================================================
+2026-06-23 01:33:24.446101 Output:  C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\pabot_results\1\output.xml

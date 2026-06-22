@@ -5,7 +5,7 @@ Resource  ../../resources/pages/open_account.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_UI_6C Validate Transfer Funds with Insufficient Balance
@@ -14,9 +14,7 @@ TC_UI_6C Validate Transfer Funds with Insufficient Balance
 
     login  ${USER_ID}  ${USER_PWD}
     Log  Logged in successfully
-    Create Account    SAVINGS
-    Sleep    1
     ${new_account}=    Create Account    SAVINGS
-    Transfer Funds A  ${ACCOUNT_ID}  ${new_account}  50000000001
-
+    Transfer Funds A  ${ACCOUNT_ID}  ${new_account}  50000000919
+    Wait Until Element Is Visible    ${Amount_result}
     Page Should Contain    Transfer Incomplete!

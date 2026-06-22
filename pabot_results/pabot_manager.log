@@ -1,0 +1,147 @@
+[INFO]    Initialized logging in .\pabot_results
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 started.
+[DEBUG]   2026-06-23 01:33:22.266036 [PID:31792] [0] [ID:0] EXECUTING Tests.Api.TC API 01
+[DEBUG]   2026-06-23 01:33:22.266036 [PID:12100] [1] [ID:1] EXECUTING Tests.Api.TC API 02
+[INFO]    2026-06-23 01:33:24.384658 [PID:31792] [0] [ID:0] PASSED Tests.Api.TC API 01 in 2.1 seconds
+[DEBUG]   2026-06-23 01:33:24.384658 [PID:21892] [0] [ID:2] EXECUTING Tests.Api.TC API 03
+[INFO]    2026-06-23 01:33:24.687969 [PID:12100] [1] [ID:1] PASSED Tests.Api.TC API 02 in 2.4 seconds
+[DEBUG]   2026-06-23 01:33:24.698189 [PID:19888] [1] [ID:3] EXECUTING Tests.Api.TC API 04
+[INFO]    2026-06-23 01:33:26.507950 [PID:19888] [1] [ID:3] PASSED Tests.Api.TC API 04 in 1.8 seconds
+[DEBUG]   2026-06-23 01:33:26.507950 [PID:29148] [0] [ID:4] EXECUTING Tests.Api.TC API 05
+[INFO]    2026-06-23 01:33:26.907631 [PID:21892] [0] [ID:2] PASSED Tests.Api.TC API 03 in 2.5 seconds
+[DEBUG]   2026-06-23 01:33:26.918094 [PID:38116] [1] [ID:5] EXECUTING Tests.E2E.TC E2E 03
+[INFO]    2026-06-23 01:33:28.434912 [PID:29148] [0] [ID:4] PASSED Tests.Api.TC API 05 in 1.9 seconds
+[DEBUG]   2026-06-23 01:33:28.450910 [PID:36700] [0] [ID:6] EXECUTING Tests.Ui.TC UI 01
+[DEBUG]   2026-06-23 01:33:31.939600 [PID:38116] [1] [ID:5] still running Tests.E2E.TC E2E 03 after 5.0s
+[DEBUG]   2026-06-23 01:33:33.482380 [PID:36700] [0] [ID:6] still running Tests.Ui.TC UI 01 after 5.0s
+[INFO]    2026-06-23 01:33:38.829545 [PID:36700] [0] [ID:6] PASSED Tests.Ui.TC UI 01 in 10.4 seconds
+[DEBUG]   2026-06-23 01:33:38.829545 [PID:28988] [1] [ID:7] EXECUTING Tests.Ui.TC UI 02
+[DEBUG]   2026-06-23 01:33:42.021708 [PID:38116] [1] [ID:5] still running Tests.E2E.TC E2E 03 after 15.0s
+[DEBUG]   2026-06-23 01:33:43.897804 [PID:28988] [1] [ID:7] still running Tests.Ui.TC UI 02 after 5.0s
+[INFO]    2026-06-23 01:33:47.380952 [PID:38116] [1] [ID:5] PASSED Tests.E2E.TC E2E 03 in 20.5 seconds
+[DEBUG]   2026-06-23 01:33:47.396211 [PID:35780] [0] [ID:8] EXECUTING Tests.Ui.TC UI 03
+[DEBUG]   2026-06-23 01:33:52.434428 [PID:35780] [0] [ID:8] still running Tests.Ui.TC UI 03 after 5.0s
+[INFO]    2026-06-23 01:33:53.167773 [PID:28988] [1] [ID:7] PASSED Tests.Ui.TC UI 02 in 14.3 seconds
+[DEBUG]   2026-06-23 01:33:53.186038 [PID:27904] [1] [ID:9] EXECUTING Tests.Ui.TC UI 04
+[DEBUG]   2026-06-23 01:33:58.219360 [PID:27904] [1] [ID:9] still running Tests.Ui.TC UI 04 after 5.0s
+[INFO]    2026-06-23 01:34:01.514011 [PID:35780] [0] [ID:8] PASSED Tests.Ui.TC UI 03 in 14.1 seconds
+[DEBUG]   2026-06-23 01:34:01.514011 [PID:36944] [0] [ID:10] EXECUTING Tests.Ui.TC UI 05
+[INFO]    2026-06-23 01:34:03.563147 [PID:27904] [1] [ID:9] PASSED Tests.Ui.TC UI 04 in 10.4 seconds
+[DEBUG]   2026-06-23 01:34:03.574477 [PID:23968] [1] [ID:11] EXECUTING Tests.Ui.TC UI 6A
+[DEBUG]   2026-06-23 01:34:06.553597 [PID:36944] [0] [ID:10] still running Tests.Ui.TC UI 05 after 5.0s
+[DEBUG]   2026-06-23 01:34:08.595686 [PID:23968] [1] [ID:11] still running Tests.Ui.TC UI 6A after 5.0s
+[DEBUG]   2026-06-23 01:34:16.639547 [PID:36944] [0] [ID:10] still running Tests.Ui.TC UI 05 after 15.0s
+[INFO]    2026-06-23 01:34:18.253261 [PID:36944] [0] [ID:10] PASSED Tests.Ui.TC UI 05 in 16.7 seconds
+[DEBUG]   2026-06-23 01:34:18.261024 [PID:29960] [0] [ID:12] EXECUTING Tests.Ui.TC UI 6B
+[DEBUG]   2026-06-23 01:34:18.670409 [PID:23968] [1] [ID:11] still running Tests.Ui.TC UI 6A after 15.0s
+[INFO]    2026-06-23 01:34:20.887947 [PID:23968] [1] [ID:11] Execution failed in Tests.Ui.TC UI 6A with 1 failing test(s)
+==============================================================================
+Tests
+==============================================================================
+Tests.Ui
+==============================================================================
+Tests.Ui.TC UI 6A
+==============================================================================
+TC_UI_06A Validate Zero Amount Transfer :: Validate transfer funds... Created Account: 14010
+| FAIL |
+Page should have contained text 'Transfer Incomplete!' but did not.
+------------------------------------------------------------------------------
+Tests.Ui.TC UI 6A                                                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests.Ui                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\pabot_results\11\output.xml
+[DEBUG]   2026-06-23 01:34:20.887947 [PID:23652] [1] [ID:13] EXECUTING Tests.Ui.TC UI 6C
+[DEBUG]   2026-06-23 01:34:23.284442 [PID:29960] [0] [ID:12] still running Tests.Ui.TC UI 6B after 5.0s
+[DEBUG]   2026-06-23 01:34:25.927436 [PID:23652] [1] [ID:13] still running Tests.Ui.TC UI 6C after 5.0s
+[DEBUG]   2026-06-23 01:34:33.358026 [PID:29960] [0] [ID:12] still running Tests.Ui.TC UI 6B after 15.0s
+[INFO]    2026-06-23 01:34:35.896974 [PID:23652] [1] [ID:13] Execution failed in Tests.Ui.TC UI 6C with 1 failing test(s)
+==============================================================================
+Tests
+==============================================================================
+Tests.Ui
+==============================================================================
+Tests.Ui.TC UI 6C
+==============================================================================
+TC_UI_6C Validate Transfer Funds with Insufficient Balance :: Vali... Created Account: 13455
+| FAIL |
+Page should have contained text 'Transfer Incomplete!' but did not.
+------------------------------------------------------------------------------
+Tests.Ui.TC UI 6C                                                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests.Ui                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\pabot_results\13\output.xml
+[DEBUG]   2026-06-23 01:34:35.907203 [PID:25696] [0] [ID:14] EXECUTING Tests.Ui.TC UI 7
+[INFO]    2026-06-23 01:34:36.772542 [PID:29960] [0] [ID:12] Execution failed in Tests.Ui.TC UI 6B with 1 failing test(s)
+==============================================================================
+Tests
+==============================================================================
+Tests.Ui
+==============================================================================
+Tests.Ui.TC UI 6B
+==============================================================================
+TC_UI_06B Validate Negative Amount Transfer :: Validate transfer f... Created Account: 13566
+| FAIL |
+Page should have contained text 'Transfer Incomplete!' but did not.
+------------------------------------------------------------------------------
+Tests.Ui.TC UI 6B                                                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests.Ui                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\pabot_results\12\output.xml
+
+C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'parabank.parasoft.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+[DEBUG]   2026-06-23 01:34:36.783238 [PID:33152] [1] [ID:15] EXECUTING Tests.Ui.TC-LOGIN-01
+[DEBUG]   2026-06-23 01:34:40.930109 [PID:25696] [0] [ID:14] still running Tests.Ui.TC UI 7 after 5.0s
+[DEBUG]   2026-06-23 01:34:41.807406 [PID:33152] [1] [ID:15] still running Tests.Ui.TC-LOGIN-01 after 5.0s
+[INFO]    2026-06-23 01:34:46.834509 [PID:33152] [1] [ID:15] PASSED Tests.Ui.TC-LOGIN-01 in 10.1 seconds
+[INFO]    2026-06-23 01:34:49.176519 [PID:25696] [0] [ID:14] Execution failed in Tests.Ui.TC UI 7 with 1 failing test(s)
+==============================================================================
+Tests
+==============================================================================
+Tests.Ui
+==============================================================================
+Tests.Ui.TC UI 7
+==============================================================================
+TC_UI_07 Validate Transfer To Same Account :: Validate transfer to... | FAIL |
+Page should have contained text 'Transfer Incomplete!' but did not.
+------------------------------------------------------------------------------
+Tests.Ui.TC UI 7                                                      | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests.Ui                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\pabot_results\14\output.xml
+[INFO]    16 tests, 12 passed, 4 failed, 0 skipped.
+[INFO]    ===================================================
+[INFO]    Output:  C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\output.xml
+[INFO]    Log:     C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\log.html
+[INFO]    Report:  C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\report.html
+[DEBUG]   Finalizing Pabot execution...
+[DEBUG]   Stopping PabotLib process
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 stopped.
+[DEBUG]   PabotLib process stopped
+[INFO]    Total testing: 2 minutes 51.30 seconds
+[INFO]    Elapsed time:  1 minute 27.79 seconds
+[DEBUG]   Logs flushed successfully.

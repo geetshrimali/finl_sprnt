@@ -1,0 +1,17 @@
+--suite Tests.Ui.TC UI 02
+--exclude e2e
+--variable CALLER_ID:0d77826d81d64c9da9778608ac07234d
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:1
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:2
+--variable PABOTQUEUEINDEX:7
+--variable PABOTLASTLEVEL:Tests.Ui.TC UI 02
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\7
+--consolecolors off
+--consolemarkers off
+tests

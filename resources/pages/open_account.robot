@@ -11,15 +11,15 @@ Create Account
 
     Wait Until Element Is Visible    ${Account_Type}    10s
 
-    Wait Until Element Does Not Contain    ${FROM_ACCOUNT}    NONE
-
     Select From List By Label    ${Account_Type}    ${acc_type}
-    Sleep    2
-    Click Element    ${Open_New_Account}
-    Sleep    1
-    Wait Until Page Contains
-    ...    Congratulations, your account is now open.
 
+
+    Wait Until Element Contains    ${From_Account}    13344
+
+    Wait Until Element Is Enabled  ${Open_New_account}  5s
+    Click Element    ${Open_New_account}
+    Wait Until Page Contains  Congratulations, your account is now open.
+    Wait Until Element Is Visible    ${New_Account_ID_LOC}  5s
     ${accountId}=    Get Text    ${New_Account_ID_LOC}
 
     Set Suite Variable    ${NEW_ACCOUNT_ID}    ${accountId}

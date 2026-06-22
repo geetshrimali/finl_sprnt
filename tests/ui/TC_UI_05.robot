@@ -5,7 +5,7 @@ Resource  ../../resources/pages/open_account.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_UI_05 Validate Transfer Funds
@@ -14,13 +14,13 @@ TC_UI_05 Validate Transfer Funds
 
     login  ${USER_ID}  ${USER_PWD}
     Log  Logged in successfully
-    Create Account    SAVINGS
-    Sleep    1
+
     ${new_account}=    Create Account    SAVINGS
     Transfer Funds A  ${ACCOUNT_ID}  ${new_account}  500
     Log  Transfer funds completed successfully
 
-    Sleep    1
-
     Validate Transfer
+
+    Page Should Contain    Transfer Complete!
+
     Log  Transfer validated

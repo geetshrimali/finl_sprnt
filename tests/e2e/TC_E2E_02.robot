@@ -6,7 +6,7 @@ Resource    ../../resources/keywords/api_keywords.robot
 
 Suite Setup  Setup E2E
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_E2E_02 Validate account type
@@ -14,7 +14,8 @@ TC_E2E_02 Validate account type
     [Tags]  e2e
     login    ${USER_ID}    ${USER_PWD}
     Create Account    CHECKING
-    Sleep    4
+    Page Should Contain    Congratulations, your account is now open.
+    Wait Until Keyword Succeeds   10s  2s   Account Should Exist In API  ${NEW_ACCOUNT_ID}
     ${response}=    Get Account Details    ${NEW_ACCOUNT_ID}
     Log To Console    NEW_ACCOUNT_ID=${NEW_ACCOUNT_ID}
     Should Be Equal As Integers  ${response.status_code}  200
@@ -25,3 +26,5 @@ TC_E2E_02 Validate account type
     Should Be Equal    ${body['type']}    CHECKING
     Log To Console    BALANCE=${body['balance']}
     Should Be True    ${body['balance']} >= 0
+
+    Log  Account Validated!

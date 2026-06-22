@@ -1,0 +1,17 @@
+--suite Tests.Ui.TC-LOGIN-01
+--exclude e2e
+--variable CALLER_ID:1e1a50f9d63d448a8f2a96feb4c8cab9
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:1
+--variable PABOTISLASTEXECUTIONINPOOL:1
+--variable PABOTNUMBEROFPROCESSES:2
+--variable PABOTQUEUEINDEX:15
+--variable PABOTLASTLEVEL:
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\15
+--consolecolors off
+--consolemarkers off
+tests

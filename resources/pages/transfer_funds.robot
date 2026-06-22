@@ -13,9 +13,8 @@ Transfer Funds A
 
     Input Text    ${Funds_Amount}    ${amount}
 
-    Sleep    1
+    Wait Until Element Contains    ${From_Account}    ${from_acc}
 
-    Wait Until Element Does Not Contain    ${From_Account}    NONE
     Select From List By Value    ${From_Account}    ${from_acc}
     Select From List By Value    ${To_Account}    ${to_acc}
 
@@ -26,9 +25,8 @@ Transfer Funds A
     Set Suite Variable    ${FROM_ACNT}    ${from}
     Set Suite Variable    ${TO_ACNT}    ${to}
 
-    Sleep    2
+    Wait Until Element Is Enabled    ${Transfer_Button}
     Click Element    ${Transfer_Button}
-    Sleep    2
     Wait Until Page Contains    Transfer Complete!
     Log    Funds transferred
 
@@ -41,7 +39,7 @@ Transfer Funds B
 
     Input Text    ${Funds_Amount}    ${amount}
 
-    Sleep    1
+    Wait Until Element Contains    ${From_Account}    13344
 
     Select From List By Index    ${From_Account}    0
     Select From List By Index    ${To_Account}    1
@@ -53,15 +51,14 @@ Transfer Funds B
     Set Suite Variable    ${FROM_ACNT}    ${from}
     Set Suite Variable    ${TO_ACNT}    ${to}
 
-    Sleep    2
+    Wait Until Element Is Enabled    ${Transfer_Button}
     Click Element    ${Transfer_Button}
-    Sleep    2
-    Wait Until Page Contains    Transfer Complete!
+    Wait Until Page Contains    Transfer Complete!  2s
     Log    Funds transferred
 
 Validate Transfer
     Page Should Contain    Transfer Complete!
-
+    Wait Until Element Is Visible    ${Amount_Result}
     ${amount}=    Get Text    ${Amount_Result}
     ${from}=      Get Text    ${From_Account_Result}
     ${to}=        Get Text    ${To_Account_Result}
@@ -81,12 +78,11 @@ Transfer Funds Same Account
 
     Input Text    ${Funds_Amount}    ${amount}
 
-    Sleep    1
+    Wait Until Element Contains    ${From_Account}    13344
 
     Select From List By Index    ${From_Account}    0
     Select From List By Index    ${To_Account}    0
-    Sleep    2
+    Wait Until Element Is Enabled    ${Transfer_Button}
     Click Element    ${Transfer_Button}
-    Sleep    1
     Wait Until Page Contains    Transfer Complete!
     Log    Funds transferred

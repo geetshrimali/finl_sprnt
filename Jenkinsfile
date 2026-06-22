@@ -152,6 +152,28 @@ pipeline {
         }
 
         // -------------------------------------------------------------
+        // Retry failed tests
+        // -----
+        stage('Retry Failed Tests') {
+    steps {
+        echo "==== Retrying Failed Tests ===="
+        bat """
+            @echo off
+            call "%VENV_DIR%\\Scripts\\activate.bat"
+
+            if exist "%OUTPUT_DIR%\\output.xml" (
+                python -m robot --rerunfailed "%OUTPUT_DIR%\\output.xml" ^
+                    --outputdir "%OUTPUT_DIR%\\rerun" ^
+                    "%TESTS_DIR%"
+            )
+
+            exit /b 0
+        """
+    }
+}
+
+
+        // -------------------------------------------------------------
         // Stage 6: Publish Robot Framework metrics (plugin-aware)
         // -------------------------------------------------------------
         stage('Publish Reports') {

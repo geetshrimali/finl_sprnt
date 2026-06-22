@@ -4,7 +4,7 @@ Resource  ../../resources/pages/open_account.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_UI_02 Create Checking Account
@@ -14,3 +14,4 @@ TC_UI_02 Create Checking Account
     login    ${USER_ID}    ${USER_PWD}
     Clear Database
     Create Account  CHECKING
+    Page Should Contain    Congratulations, your account is now open.

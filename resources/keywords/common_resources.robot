@@ -3,6 +3,7 @@ Library  SeleniumLibrary
 Library  ../../config/env_loader.py
 #Library  ../../env_loader
 Resource    api_keywords.robot
+Library    OperatingSystem
 
 *** Variables ***
 ${BROWSER}  chrome
@@ -35,3 +36,7 @@ Setup E2E
     Load Environment
     Create Session To API
 
+Save Screenshot
+    Create Directory    ${OUTPUT DIR}/screenshots
+    Capture Page Screenshot    ${OUTPUT DIR}/screenshots/${TEST NAME}.png
+    Close All Browsers

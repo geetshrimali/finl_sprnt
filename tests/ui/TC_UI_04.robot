@@ -6,7 +6,7 @@ Resource    ../../resources/pages/open_account.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_UI_04 Transfer Funds
@@ -17,5 +17,7 @@ TC_UI_04 Transfer Funds
     Log    logged in successfully
     ${new_account}=    Create Account    SAVINGS
     Transfer Funds A  ${ACCOUNT_ID}  ${new_account}  500
+
+    Page Should Contain    Transfer Complete!
 
     Log    transfer funds successful

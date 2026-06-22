@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.0 on win32)" generated="2026-06-23T01:34:03.935899" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\tests">
+<suite id="s1-s1" name="Ui" source="C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\tests\ui">
+<suite id="s1-s1-s1" name="TC UI 6A" source="C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\tests\ui\TC_UI_6A.robot">
+<kw name="Load Environment" owner="common_resources" type="SETUP">
+<kw name="Load Env" owner="env_loader">
+<arg>${ENV}</arg>
+<status status="PASS" start="2026-06-23T01:34:04.323487" elapsed="0.000000"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-06-23T01:34:04.323487" level="INFO">${url} = https://parabank.parasoft.com</msg>
+<var>${url}</var>
+<arg>baseurl</arg>
+<status status="PASS" start="2026-06-23T01:34:04.323487" elapsed="0.000000"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-06-23T01:34:04.323487" level="INFO">${id} = john</msg>
+<var>${id}</var>
+<arg>user_id</arg>
+<status status="PASS" start="2026-06-23T01:34:04.323487" elapsed="0.000000"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-06-23T01:34:04.323487" level="INFO">${pwd} = demo</msg>
+<var>${pwd}</var>
+<arg>user_password</arg>
+<status status="PASS" start="2026-06-23T01:34:04.323487" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-06-23T01:34:04.339522" level="INFO">${BASE_URL} = https://parabank.parasoft.com</msg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-06-23T01:34:04.323487" elapsed="0.016035"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-06-23T01:34:04.339522" level="INFO">${USER_ID} = john</msg>
+<arg>${USER_ID}</arg>
+<arg>${id}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-06-23T01:34:04.339522" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-06-23T01:34:04.341744" level="INFO">${USER_PWD} = demo</msg>
+<arg>${USER_PWD}</arg>
+<arg>${pwd}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-06-23T01:34:04.339522" elapsed="0.002222"/>
+</kw>
+<status status="PASS" start="2026-06-23T01:34:04.323487" elapsed="0.018257"/>
+</kw>
+<test id="s1-s1-s1-t1" name="TC_UI_06A Validate Zero Amount Transfer" line="11">
+<kw name="open app" owner="common_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:04.341744" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-23T01:34:04.341744" elapsed="5.254401"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-23T01:34:09.597145" elapsed="0.033378"/>
+</kw>
+<doc>opens the application</doc>
+<status status="PASS" start="2026-06-23T01:34:04.341744" elapsed="5.288779"/>
+</kw>
+<kw name="login" owner="home_pg">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${usr_fld}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-23T01:34:09.631523" elapsed="0.018909"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:09.650432" level="INFO">Typing text 'john' into text field 'css=input[name=username]'.</msg>
+<arg>${usr_fld}</arg>
+<arg>${id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:09.650432" elapsed="0.181319"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-06-23T01:34:09.831751" level="INFO">entering id</msg>
+<arg>entering id</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-06-23T01:34:09.831751" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:09.831751" level="INFO">Typing text 'demo' into text field 'css=input[name=password]'.</msg>
+<arg>${pass_fld}</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:09.831751" elapsed="0.096402"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-06-23T01:34:09.929224" level="INFO">entering password</msg>
+<arg>entering password</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-06-23T01:34:09.928153" elapsed="0.001071"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:09.929224" level="INFO">Clicking element 'css=input.button'.</msg>
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:09.929224" elapsed="2.309322"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-06-23T01:34:12.238546" level="INFO">login</msg>
+<arg>login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-06-23T01:34:12.238546" elapsed="0.000000"/>
+</kw>
+<arg>${USER_ID}</arg>
+<arg>${USER_PWD}</arg>
+<status status="PASS" start="2026-06-23T01:34:09.630523" elapsed="2.608023"/>
+</kw>
+<kw name="Create Account" owner="open_account">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:12.239620" level="INFO">Clicking element 'css=a[href="openaccount.htm"]'.</msg>
+<arg>${Open_Account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:12.239620" elapsed="0.533103"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Account_Type}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-23T01:34:12.772723" elapsed="0.016547"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:12.789270" level="INFO">Selecting options from selection list 'xpath=//select[@id="type"]' by label SAVINGS.</msg>
+<arg>${Account_Type}</arg>
+<arg>${acc_type}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-06-23T01:34:12.789270" elapsed="0.092287"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${From_Account}</arg>
+<arg>13344</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2026-06-23T01:34:12.881557" elapsed="0.874493"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${Open_New_account}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-06-23T01:34:13.756050" elapsed="0.020165"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:13.776215" level="INFO">Clicking element 'css=input.button'.</msg>
+<arg>${Open_New_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:13.776215" elapsed="0.054610"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Congratulations, your account is now open.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-23T01:34:13.830825" elapsed="0.011323"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${New_Account_ID_LOC}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-23T01:34:13.842148" elapsed="0.737584"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:14.611959" level="INFO">${accountId} = 14010</msg>
+<var>${accountId}</var>
+<arg>${New_Account_ID_LOC}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:14.579732" elapsed="0.032227"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-06-23T01:34:14.611959" level="INFO">${NEW_ACCOUNT_ID} = 14010</msg>
+<arg>${NEW_ACCOUNT_ID}</arg>
+<arg>${accountId}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-06-23T01:34:14.611959" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Created Account: ${accountId}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-23T01:34:14.611959" elapsed="0.010487"/>
+</kw>
+<return>
+<value>${accountId}</value>
+<status status="PASS" start="2026-06-23T01:34:14.622446" elapsed="0.000000"/>
+</return>
+<msg time="2026-06-23T01:34:14.622446" level="INFO">${new_account} = 14010</msg>
+<var>${new_account}</var>
+<arg>SAVINGS</arg>
+<status status="PASS" start="2026-06-23T01:34:12.239620" elapsed="2.382826"/>
+</kw>
+<kw name="Transfer Funds A" owner="transfer_funds">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:14.622446" level="INFO">Clicking element 'css=a[href="transfer.htm"]'.</msg>
+<arg>${Transfer_Funds}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:14.622446" elapsed="0.530320"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-06-23T01:34:15.152766" level="INFO">clicked transfer funds</msg>
+<arg>clicked transfer funds</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-06-23T01:34:15.152766" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Funds_Amount}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-23T01:34:15.153766" elapsed="0.019778"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:15.173544" level="INFO">Typing text '0' into text field 'xpath=//input[@id='amount']'.</msg>
+<arg>${Funds_Amount}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:15.173544" elapsed="0.087551"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${From_Account}</arg>
+<arg>${from_acc}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2026-06-23T01:34:15.261095" elapsed="1.170092"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:16.431187" level="INFO">Selecting options from selection list 'xpath=//select[@id='fromAccountId']' by value 13344.</msg>
+<arg>${From_Account}</arg>
+<arg>${from_acc}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.431187" elapsed="0.031708"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:16.462895" level="INFO">Selecting options from selection list 'xpath=//select[@id='toAccountId']' by value 14010.</msg>
+<arg>${To_Account}</arg>
+<arg>${to_acc}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.462895" elapsed="0.048729"/>
+</kw>
+<kw name="Get Selected List Value" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:16.539189" level="INFO">${from} = 13344</msg>
+<var>${from}</var>
+<arg>${From_Account}</arg>
+<doc>Returns the value of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.511624" elapsed="0.027565"/>
+</kw>
+<kw name="Get Selected List Value" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:16.597474" level="INFO">${to} = 14010</msg>
+<var>${to}</var>
+<arg>${To_Account}</arg>
+<doc>Returns the value of selected option from selection list ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.539189" elapsed="0.058285"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-06-23T01:34:16.604554" level="INFO">${TRANSFER_AMOUNT} = 0</msg>
+<arg>${TRANSFER_AMOUNT}</arg>
+<arg>${amount}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.597474" elapsed="0.007080"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-06-23T01:34:16.604554" level="INFO">${FROM_ACNT} = 13344</msg>
+<arg>${FROM_ACNT}</arg>
+<arg>${from}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.604554" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-06-23T01:34:16.604554" level="INFO">${TO_ACNT} = 14010</msg>
+<arg>${TO_ACNT}</arg>
+<arg>${to}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.604554" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${Transfer_Button}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.604554" elapsed="0.010702"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:16.615256" level="INFO">Clicking element 'css=input.button'.</msg>
+<arg>${Transfer_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.615256" elapsed="0.060790"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Transfer Complete!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.676046" elapsed="0.010561"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-06-23T01:34:16.687609" level="INFO">Funds transferred</msg>
+<arg>Funds transferred</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.686607" elapsed="0.001002"/>
+</kw>
+<arg>${ACCOUNT_ID}</arg>
+<arg>${new_account}</arg>
+<arg>0</arg>
+<status status="PASS" start="2026-06-23T01:34:14.622446" elapsed="2.065163"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Amount_result}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-23T01:34:16.687609" elapsed="1.067178"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:17.931086" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-23T01:34:17.931086" level="FAIL">Page should have contained text 'Transfer Incomplete!' but did not.</msg>
+<arg>Transfer Incomplete!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-06-23T01:34:17.754787" elapsed="0.176299">Page should have contained text 'Transfer Incomplete!' but did not.</status>
+</kw>
+<kw name="Save Screenshot" owner="common_resources" type="TEARDOWN">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-23T01:34:17.931086" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\pabot_results\11\screenshots"&gt;C:\Users\GEET SHRIMALI\OneDrive\Desktop\final_sprint\pabot_results\11\screenshots&lt;/a&gt;'.</msg>
+<arg>${OUTPUT DIR}/screenshots</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-23T01:34:17.931086" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-23T01:34:18.050284" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_UI_06A%20Validate%20Zero%20Amount%20Transfer.png"&gt;&lt;img src="screenshots/TC_UI_06A%20Validate%20Zero%20Amount%20Transfer.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT DIR}/screenshots/${TEST NAME}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-23T01:34:17.931086" elapsed="0.119198"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-06-23T01:34:18.050284" elapsed="2.622799"/>
+</kw>
+<status status="PASS" start="2026-06-23T01:34:17.931086" elapsed="2.741997"/>
+</kw>
+<doc>Validate transfer funds with zero amount(FAIL)</doc>
+<tag>ui negative</tag>
+<status status="FAIL" start="2026-06-23T01:34:04.341744" elapsed="16.331339">Page should have contained text 'Transfer Incomplete!' but did not.</status>
+</test>
+<status status="FAIL" start="2026-06-23T01:34:03.960523" elapsed="16.712560"/>
+</suite>
+<status status="FAIL" start="2026-06-23T01:34:03.959524" elapsed="16.713559"/>
+</suite>
+<status status="FAIL" start="2026-06-23T01:34:03.935899" elapsed="16.737184"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">ui negative</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="Ui" id="s1-s1" pass="0" fail="1" skip="0">Tests.Ui</stat>
+<stat name="TC UI 6A" id="s1-s1-s1" pass="0" fail="1" skip="0">Tests.Ui.TC UI 6A</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -4,7 +4,7 @@ Resource  ../../resources/pages/home_pg.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC-LOGIN-01 Verify login functionality

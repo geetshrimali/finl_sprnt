@@ -6,7 +6,7 @@ Resource    ../../resources/keywords/api_keywords.robot
 
 Suite Setup  Setup E2E
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_E2E_01 Create Checking Account and Verify via API
@@ -15,7 +15,11 @@ TC_E2E_01 Create Checking Account and Verify via API
     login    ${USER_ID}    ${USER_PWD}
     Create Account    CHECKING
 
+    Page Should Contain    Congratulations, your account is now open.  2s
+
     ${response}=    Get Customer Accounts    ${CUSTOMER_ID}
 
     Should Be Equal As Integers    ${response.status_code}    200
     Should Contain    ${response.text}    ${NEW_ACCOUNT_ID}
+
+    Log  Account Created and Verified!

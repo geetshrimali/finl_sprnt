@@ -5,7 +5,7 @@ Resource  ../../resources/keywords/api_keywords.robot
 
 Suite Setup  Load Environment
 Test Setup  open app
-Test Teardown  close app
+Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_UI_01 Create Savings Account
@@ -14,3 +14,4 @@ TC_UI_01 Create Savings Account
 
     login    ${USER_ID}    ${USER_PWD}
     Create Account  SAVINGS
+    Page Should Contain    Congratulations, your account is now open.
