@@ -23,6 +23,6 @@ TC_E2E_03 Transfer Funds And Validate Via API
 
     Transfer Funds A  ${ACCOUNT_ID}  ${dest_account}    100
 
-    Wait Until Keyword Succeeds    10s    1s  Validate Transfer Via API  ${ACCOUNT_ID}  ${dest_account}  ${balance_before_from}  ${balance_before_to}
+    Wait Until Keyword Succeeds  10s  1s  Validate Transfer Via API  ${ACCOUNT_ID}  ${dest_account}  ${balance_before_from}  ${balance_before_to}
 
     Log  Funds Transferred and Validated

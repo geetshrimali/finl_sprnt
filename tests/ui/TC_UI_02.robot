@@ -8,7 +8,7 @@ Test Teardown  Save Screenshot
 
 *** Test Cases ***
 TC_UI_02 Create Checking Account
-    [Documentation]  Create savings account
+    [Documentation]  Create checking account
     [Tags]  ui
 
     login    ${USER_ID}    ${USER_PWD}

@@ -13,18 +13,18 @@ TC_E2E_02 Validate account type
     [Documentation]  Validate account type and details
     [Tags]  e2e
     login    ${USER_ID}    ${USER_PWD}
-    Create Account    CHECKING
+    ${new_check}=  Create Account    CHECKING
     Page Should Contain    Congratulations, your account is now open.
-    Wait Until Keyword Succeeds   10s  2s   Account Should Exist In API  ${NEW_ACCOUNT_ID}
-    ${response}=    Get Account Details    ${NEW_ACCOUNT_ID}
-    Log To Console    NEW_ACCOUNT_ID=${NEW_ACCOUNT_ID}
+    Wait Until Keyword Succeeds   10s  2s   Account Should Exist In API  ${new_check}
+    ${response}=    Get Account Details    ${new_check}
+    Log To Console   NEW_ACCOUNT_ID=${new_check}
     Should Be Equal As Integers  ${response.status_code}  200
 
-    ${body}=    Set Variable    ${response.json()}
+    ${body}=   Set Variable  ${response.json()}
 
     Should Be Equal As Integers    ${response.status_code}    200
     Should Be Equal    ${body['type']}    CHECKING
-    Log To Console    BALANCE=${body['balance']}
+    Log To Console    BAL=${body['balance']}
     Should Be True    ${body['balance']} >= 0
 
     Log  Account Validated!
