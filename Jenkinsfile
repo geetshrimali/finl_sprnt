@@ -139,7 +139,7 @@ pipeline {
                     mkdir "%OUTPUT_DIR%"
 
                     echo Running Robot Framework tests from "%TESTS_DIR%" (recursive)...
-                    python -m robot --outputdir "%OUTPUT_DIR%" --listener allure_robotframework:%ALLURE_RESULTS% "%TESTS_DIR%"\ui\TC_UI_03.robot
+                    python -m robot --outputdir "%OUTPUT_DIR%" --listener allure_robotframework:%ALLURE_RESULTS% "%TESTS_DIR%"/ui/TC_UI_03.robot
 
                     set RC=%ERRORLEVEL%
                     echo Robot Framework execution finished with exit code %RC%.
